@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="STOK_TAKIPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Birim">
+    <Key>
+      <PropertyRef Name="birim_id" />
+    </Key>
+    <Property Name="birim_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="birim_ad" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Depo">
+    <Key>
+      <PropertyRef Name="depo_id" />
+    </Key>
+    <Property Name="depo_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="depo_ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="depo_yer" Type="nvarchar" MaxLength="50" />
+    <Property Name="depo_adres" Type="nvarchar" MaxLength="50" />
+    <Property Name="depo_sorumlusu" Type="nvarchar" MaxLength="50" />
+    <Property Name="depo_telefon" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Firma">
+    <Key>
+      <PropertyRef Name="firma_id" />
+    </Key>
+    <Property Name="firma_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firma_ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="firma_adres" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="firma_telefon" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="vergi_dairesi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hesap_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="firma_aciklama" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="firma_resmi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Kategori">
+    <Key>
+      <PropertyRef Name="kategori_id" />
+    </Key>
+    <Property Name="kategori_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kategori_ad" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Kullanici">
+    <Key>
+      <PropertyRef Name="kullanici_id" />
+    </Key>
+    <Property Name="kullanici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tc_no" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="ad" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="soyad" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="kullanici_ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="kullanici_sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dogum_tarih" Type="date" Nullable="false" />
+    <Property Name="cinsiyet" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="resim" Type="nvarchar" MaxLength="200" />
+    <Property Name="hesap_durum" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="tema" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Stok">
+    <Key>
+      <PropertyRef Name="stok_id" />
+    </Key>
+    <Property Name="stok_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urun_kod" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="urun_ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="urun_miktar" Type="int" Nullable="false" />
+    <Property Name="kategori_id" Type="int" Nullable="false" />
+    <Property Name="firma_id" Type="int" Nullable="false" />
+    <Property Name="birim_id" Type="int" Nullable="false" />
+    <Property Name="birim_miktar" Type="int" Nullable="false" />
+    <Property Name="birim_fiyat" Type="money" />
+    <Property Name="depo_id" Type="int" Nullable="false" />
+    <Property Name="resim" Type="nvarchar" MaxLength="200" />
+    <Property Name="alis_tarih" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_Stok_Satis">
+    <Key>
+      <PropertyRef Name="stok_satis_id" />
+    </Key>
+    <Property Name="stok_satis_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stok_id" Type="int" Nullable="false" />
+    <Property Name="firma_id" Type="int" Nullable="false" />
+    <Property Name="depo_id" Type="int" Nullable="false" />
+    <Property Name="miktar" Type="int" Nullable="false" />
+    <Property Name="net_fiyat" Type="money" />
+    <Property Name="kdv" Type="int" />
+    <Property Name="otv" Type="int" />
+    <Property Name="brut_fiyat" Type="money" />
+    <Property Name="satis_tarih" Type="date" />
+  </EntityType>
+  <EntityType Name="tbl_Transfer">
+    <Key>
+      <PropertyRef Name="transfer_id" />
+    </Key>
+    <Property Name="transfer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stok_id" Type="int" />
+    <Property Name="miktar" Type="int" />
+    <Property Name="gidicegi_tarih" Type="date" />
+    <Property Name="bulundugu_depo_id" Type="int" />
+    <Property Name="gidecegi_depo_id" Type="int" />
+  </EntityType>
+  <EntityContainer Name="STOK_TAKIPModelStoreContainer">
+    <EntitySet Name="tbl_Birim" EntityType="Self.tbl_Birim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Depo" EntityType="Self.tbl_Depo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Firma" EntityType="Self.tbl_Firma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Kategori" EntityType="Self.tbl_Kategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Kullanici" EntityType="Self.tbl_Kullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Stok" EntityType="Self.tbl_Stok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Stok_Satis" EntityType="Self.tbl_Stok_Satis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Transfer" EntityType="Self.tbl_Transfer" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

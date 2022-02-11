@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b01cddc8c40540fd9b0b0812dd61b187" Name="Diagram1">
+        <EntityTypeShape EntityType="STOK_TAKIPModel.tbl_Birim" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STOK_TAKIPModel.tbl_Depo" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STOK_TAKIPModel.tbl_Kategori" Width="1.5" PointX="2.875" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STOK_TAKIPModel.tbl_Transfer" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="STOK_TAKIPModel.tbl_Kullanici" Width="1.5" PointX="5" PointY="0.75" />
+        <EntityTypeShape EntityType="STOK_TAKIPModel.tbl_Firma" Width="1.5" PointX="0.625" PointY="2.875" />
+        <EntityTypeShape EntityType="STOK_TAKIPModel.tbl_Stok" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="STOK_TAKIPModel.tbl_Stok_Satis" Width="1.5" PointX="7.25" PointY="3.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

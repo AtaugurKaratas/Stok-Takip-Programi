@@ -1,0 +1,218 @@
+Hatalı kullanıcı kayıt işlemi.
+Hatalı Kullanıcı Kayıt İşlemi System.ArgumentOutOfRangeException: Dizin ve uzunluk, dize içinde bir konuma başvurmalıdır.
+Parametre adı: length
+   konum: System.String.Substring(Int32 startIndex, Int32 length)
+   konum: StokTakipProgramiFinal.KullaniciEkle.sifre() C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 65
+   konum: StokTakipProgramiFinal.KullaniciEkle.btnKaydet_Click(Object sender, EventArgs e) C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 9125.01.2022 04:38:29
+Atauğur Karataş Kullanıcısı Eklendi. 25.01.2022 04:40:46
+fwe fwe Kullanıcısı Eklendi. 25.01.2022 05:09:04
+Hatalı Kullanıcı Kayıt İşlemi System.ArgumentOutOfRangeException: Dizin ve uzunluk, dize içinde bir konuma başvurmalıdır.
+Parametre adı: length
+   konum: System.String.Substring(Int32 startIndex, Int32 length)
+   konum: StokTakipProgramiFinal.KullaniciEkle.sifre() C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 65
+   konum: StokTakipProgramiFinal.KullaniciEkle.btnKaydet_Click(Object sender, EventArgs e) C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 91 25.01.2022 05:41:19
+123 321 Kullanıcısı Eklendi. 25.01.2022 05:41:29
+Atauğur Karataş Kullanıcısı Eklendi. 25.01.2022 06:14:27
+Ülker Firması Eklendi. 25.01.2022 06:44:00
+Atauğur Karataş Kullanıcısı Eklendi. 29.01.2022 20:49:32
+Karataş Firması Eklendi. 29.01.2022 20:50:17
+Admin Kullanıcısı Eklendi. 30.01.2022 04:48:38
+Admin Kullanıcısı Eklendi. 30.01.2022 04:50:30
+Ataugur Karatas Kullanıcısı Eklendi. 30.01.2022 07:32:50
+Ataugur Karatas Kullanıcısı Eklendi. 30.01.2022 07:32:53
+Hatalı Kullanıcı Kayıt İşlemi System.ArgumentOutOfRangeException: Dizin ve uzunluk, dize içinde bir konuma başvurmalıdır.
+Parametre adı: length
+   konum: System.String.Substring(Int32 startIndex, Int32 length)
+   konum: StokTakipProgramiFinal.KullaniciEkle.sifre() C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 69
+   konum: StokTakipProgramiFinal.KullaniciEkle.btnKaydet_Click(Object sender, EventArgs e) C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 96 30.01.2022 07:35:49
+Atauğur Karataş Giriş Yaptı. 30.01.2022 12:16:06
+Atauğur Karataş giriş yaptı. 30.01.2022 12:26:45
+Atauğur Karataş giriş yaptı. 30.01.2022 12:34:20
+Atauğur Karataş giriş yaptı. 30.01.2022 12:35:45
+Atauğur Karataş giriş yaptı. 30.01.2022 12:38:06
+Atauğur Karataş giriş yaptı. 30.01.2022 12:40:19
+Atauğur Karataş giriş yaptı. 30.01.2022 12:40:49
+Atauğur Karataş giriş yaptı. 30.01.2022 12:41:32
+Atauğur Karataş giriş yaptı. 30.01.2022 12:48:49
+Atauğur Karataş giriş yaptı. 30.01.2022 12:54:51
+Atauğur Karataş giriş yaptı. 30.01.2022 13:03:48
+Atauğur Karataş giriş yaptı. 30.01.2022 13:04:26
+Atauğur Karataş giriş yaptı. 30.01.2022 13:07:01
+Atauğur Karataş giriş yaptı. 30.01.2022 13:09:09
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:10:24
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:11:14
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:22:06
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:22:36
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:23:52
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:25:53
+Atauğur Karataş giriş yaptı. 30.01.2022 13:31:48
+Atauğur Karataş giriş yaptı. 30.01.2022 13:32:05
+Atauğur Karataş giriş yaptı. 30.01.2022 13:32:54
+Atauğur Karataş giriş yaptı. 30.01.2022 13:34:01
+Atauğur Karataş giriş yaptı. 30.01.2022 13:35:47
+Atauğur Karataş giriş yaptı. 30.01.2022 13:38:46
+Atauğur Karataş giriş yaptı. 30.01.2022 13:41:30
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:44:24
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:46:45
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:48:31
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:51:51
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:52:56
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:55:03
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:55:29
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:56:20
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:56:38
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:57:32
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:58:08
+Admin kullanıcısı giriş yaptı. 30.01.2022 13:59:01
+Admin Kullanıcısı Eklendi. 30.01.2022 15:05:49
+Admin kullanıcısı giriş yaptı. 30.01.2022 15:27:35
+Admin kullanıcısı giriş yaptı. 30.01.2022 15:28:16
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 15:28:50
+Admin kullanıcısı giriş yaptı. 30.01.2022 15:32:05
+Admin kullanıcısı giriş yaptı. 30.01.2022 15:33:49
+Atauğur Karataş giriş yaptı. 30.01.2022 15:35:37
+Admin kullanıcısı giriş yaptı. 30.01.2022 15:38:55
+Admin kullanıcısı giriş yaptı. 30.01.2022 15:43:13
+Admin kullanıcısı giriş yaptı. 30.01.2022 16:21:02
+Atauğur Karataş giriş yaptı. 30.01.2022 16:23:04
+Atauğur Karataş giriş yaptı. 30.01.2022 16:25:49
+Atauğur Karataş giriş yaptı. 30.01.2022 16:27:40
+Atauğur Karataş giriş yaptı. 30.01.2022 16:30:29
+Atauğur Karataş giriş yaptı. 30.01.2022 16:33:43
+Admin kullanıcısı giriş yaptı. 30.01.2022 16:38:07
+Admin kullanıcısı giriş yaptı. 30.01.2022 16:39:37
+Admin kullanıcısı giriş yaptı. 30.01.2022 16:40:09
+Admin kullanıcısı giriş yaptı. 30.01.2022 16:41:38
+Admin kullanıcısı giriş yaptı. 30.01.2022 16:43:00
+Admin kullanıcısı giriş yaptı. 30.01.2022 16:44:22
+Admin kullanıcısı giriş yaptı. 30.01.2022 16:45:46
+Admin kullanıcısı giriş yaptı. 30.01.2022 16:46:29
+Atauğur Karataş giriş yaptı. 30.01.2022 16:51:22
+Atauğur Karataş giriş yaptı. 30.01.2022 16:52:28
+Atauğur Karataş giriş yaptı. 30.01.2022 16:56:05
+Atauğur Karataş giriş yaptı. 30.01.2022 17:06:21
+Atauğur Karataş giriş yaptı. 30.01.2022 17:06:47
+Atauğur Karataş giriş yaptı. 30.01.2022 17:09:16
+Atauğur Karataş giriş yaptı. 30.01.2022 17:20:00
+Atauğur Karataş giriş yaptı. 30.01.2022 17:20:24
+Atauğur Karataş giriş yaptı. 30.01.2022 17:22:14
+Atauğur Karataş giriş yaptı. 30.01.2022 17:24:24
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:30:19
+Hatalı Kullanıcı Kayıt İşlemi System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   konum: System.Data.Entity.Internal.InternalContext.SaveChanges()
+   konum: System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   konum: System.Data.Entity.DbContext.SaveChanges()
+   konum: StokTakipProgramiFinal.KullaniciEkle.btnKaydet_Click(Object sender, EventArgs e) C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 111 30.01.2022 17:31:06
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:32:04
+Hatalı Kullanıcı Kayıt İşlemi System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   konum: System.Data.Entity.Internal.InternalContext.SaveChanges()
+   konum: System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   konum: System.Data.Entity.DbContext.SaveChanges()
+   konum: StokTakipProgramiFinal.KullaniciEkle.btnKaydet_Click(Object sender, EventArgs e) C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 111 30.01.2022 17:32:45
+Hatalı Kullanıcı Kayıt İşlemi System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   konum: System.Data.Entity.Internal.InternalContext.SaveChanges()
+   konum: System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   konum: System.Data.Entity.DbContext.SaveChanges()
+   konum: StokTakipProgramiFinal.KullaniciEkle.btnKaydet_Click(Object sender, EventArgs e) C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 111 30.01.2022 17:33:07
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:34:43
+Ataugur Karatas Kullanıcısı Eklendi. 30.01.2022 17:35:13
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:36:09
+Ataugur Karatas Kullanıcısı Eklendi. 30.01.2022 17:36:42
+Hatalı Firma Kayıt İşlemi System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   konum: System.Data.Entity.Internal.InternalContext.SaveChanges()
+   konum: System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   konum: System.Data.Entity.DbContext.SaveChanges()
+   konum: StokTakipProgramiFinal.FirmaEkle.btnKaydet_Click(Object sender, EventArgs e) C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\FirmaEkle.cs içinde: satır 72 30.01.2022 17:37:30
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:38:35
+Ataugur Karatas Kullanıcısı Eklendi. 30.01.2022 17:38:59
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:40:05
+Ataugur Karatas Kullanıcısı Eklendi. 30.01.2022 17:40:27
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:41:37
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 17:41:59
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:43:13
+Atauğur Karataş giriş yaptı. 30.01.2022 17:43:47
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:49:42
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 17:50:02
+Atauğur Karataş giriş yaptı. 30.01.2022 17:51:16
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:53:27
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 17:53:52
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:55:34
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:56:11
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 17:56:40
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:57:49
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:58:27
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 17:58:49
+Admin kullanıcısı giriş yaptı. 30.01.2022 17:59:36
+Atauğur Karataş giriş yaptı. 30.01.2022 18:00:07
+Admin kullanıcısı giriş yaptı. 30.01.2022 18:08:31
+Hatalı Kullanıcı Kayıt İşlemi System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of UNIQUE KEY constraint 'Kullanici'. Cannot insert duplicate key in object 'dbo.tbl_Kullanici'. The duplicate key value is (13306001111, Ata).
+The statement has been terminated.
+   konum: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   konum: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   konum: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   konum: System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   konum: System.Data.SqlClient.SqlDataReader.get_MetaData()
+   konum: System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   konum: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   konum: System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   konum: System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   konum: System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   konum: System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   konum: System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   konum: System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   konum: System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   konum: System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   konum: System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   konum: System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   konum: System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   konum: System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   konum: System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   konum: System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   konum: System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   konum: System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   konum: System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   konum: System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   konum: System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Data.Entity.Internal.InternalContext.SaveChanges()
+   konum: System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   konum: System.Data.Entity.DbContext.SaveChanges()
+   konum: StokTakipProgramiFinal.KullaniciEkle.btnKaydet_Click(Object sender, EventArgs e) C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 111 30.01.2022 18:08:58
+Admin kullanıcısı giriş yaptı. 30.01.2022 18:10:08
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 18:10:30
+Admin kullanıcısı giriş yaptı. 30.01.2022 18:11:43
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:45:12
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 21:45:49
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:46:46
+Hatalı Kullanıcı Kayıt İşlemi System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   konum: System.Data.Entity.Internal.InternalContext.SaveChanges()
+   konum: System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   konum: System.Data.Entity.DbContext.SaveChanges()
+   konum: StokTakipProgramiFinal.KullaniciEkle.btnKaydet_Click(Object sender, EventArgs e) C:\Users\Karatas\Desktop\StokTakipProgramiFinal\StokTakipProgramiFinal\KullaniciEkle.cs içinde: satır 111 30.01.2022 21:47:13
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:48:02
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:49:03
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:50:12
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:51:30
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:52:14
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 21:52:53
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:54:19
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 21:54:55
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:56:36
+Admin kullanıcısı giriş yaptı. 30.01.2022 21:57:33
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 21:58:03
+Atauğur Karataş giriş yaptı. 30.01.2022 21:59:25
+Admin kullanıcısı giriş yaptı. 30.01.2022 22:10:40
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 22:11:21
+Admin kullanıcısı giriş yaptı. 30.01.2022 22:13:06
+Admin kullanıcısı giriş yaptı. 30.01.2022 22:15:45
+Admin kullanıcısı giriş yaptı. 30.01.2022 22:16:21
+Admin kullanıcısı giriş yaptı. 30.01.2022 22:16:57
+Atauğur Karataş Kullanıcısı Eklendi. 30.01.2022 22:17:31
+Admin kullanıcısı giriş yaptı. 30.01.2022 22:18:44

@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="STOK_TAKIPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Birim">
+          <Key>
+            <PropertyRef Name="birim_id" />
+          </Key>
+          <Property Name="birim_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="birim_ad" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Depo">
+          <Key>
+            <PropertyRef Name="depo_id" />
+          </Key>
+          <Property Name="depo_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="depo_ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="depo_yer" Type="nvarchar" MaxLength="50" />
+          <Property Name="depo_adres" Type="nvarchar" MaxLength="50" />
+          <Property Name="depo_sorumlusu" Type="nvarchar" MaxLength="50" />
+          <Property Name="depo_telefon" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Firma">
+          <Key>
+            <PropertyRef Name="firma_id" />
+          </Key>
+          <Property Name="firma_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firma_ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="firma_adres" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="firma_telefon" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="vergi_dairesi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hesap_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="firma_aciklama" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="firma_resmi" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Kategori">
+          <Key>
+            <PropertyRef Name="kategori_id" />
+          </Key>
+          <Property Name="kategori_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kategori_ad" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Kullanici">
+          <Key>
+            <PropertyRef Name="kullanici_id" />
+          </Key>
+          <Property Name="kullanici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tc_no" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="ad" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="soyad" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="kullanici_ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="kullanici_sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="telefon" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="dogum_tarih" Type="date" Nullable="false" />
+          <Property Name="cinsiyet" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="resim" Type="nvarchar" MaxLength="200" />
+          <Property Name="hesap_durum" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="tema" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Stok">
+          <Key>
+            <PropertyRef Name="stok_id" />
+          </Key>
+          <Property Name="stok_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="urun_kod" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="urun_ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="urun_miktar" Type="int" Nullable="false" />
+          <Property Name="kategori_id" Type="int" Nullable="false" />
+          <Property Name="firma_id" Type="int" Nullable="false" />
+          <Property Name="birim_id" Type="int" Nullable="false" />
+          <Property Name="birim_miktar" Type="int" Nullable="false" />
+          <Property Name="birim_fiyat" Type="money" />
+          <Property Name="depo_id" Type="int" Nullable="false" />
+          <Property Name="resim" Type="nvarchar" MaxLength="200" />
+          <Property Name="alis_tarih" Type="date" />
+        </EntityType>
+        <EntityType Name="tbl_Stok_Satis">
+          <Key>
+            <PropertyRef Name="stok_satis_id" />
+          </Key>
+          <Property Name="stok_satis_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="stok_id" Type="int" Nullable="false" />
+          <Property Name="firma_id" Type="int" Nullable="false" />
+          <Property Name="depo_id" Type="int" Nullable="false" />
+          <Property Name="miktar" Type="int" Nullable="false" />
+          <Property Name="net_fiyat" Type="money" />
+          <Property Name="kdv" Type="int" />
+          <Property Name="otv" Type="int" />
+          <Property Name="brut_fiyat" Type="money" />
+          <Property Name="satis_tarih" Type="date" />
+        </EntityType>
+        <EntityType Name="tbl_Transfer">
+          <Key>
+            <PropertyRef Name="transfer_id" />
+          </Key>
+          <Property Name="transfer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="stok_id" Type="int" />
+          <Property Name="miktar" Type="int" />
+          <Property Name="gidicegi_tarih" Type="date" />
+          <Property Name="bulundugu_depo_id" Type="int" />
+          <Property Name="gidecegi_depo_id" Type="int" />
+        </EntityType>
+        <EntityContainer Name="STOK_TAKIPModelStoreContainer">
+          <EntitySet Name="tbl_Birim" EntityType="Self.tbl_Birim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Depo" EntityType="Self.tbl_Depo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Firma" EntityType="Self.tbl_Firma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Kategori" EntityType="Self.tbl_Kategori" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Kullanici" EntityType="Self.tbl_Kullanici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Stok" EntityType="Self.tbl_Stok" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Stok_Satis" EntityType="Self.tbl_Stok_Satis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Transfer" EntityType="Self.tbl_Transfer" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="STOK_TAKIPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_Birim">
+          <Key>
+            <PropertyRef Name="birim_id" />
+          </Key>
+          <Property Name="birim_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="birim_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Depo">
+          <Key>
+            <PropertyRef Name="depo_id" />
+          </Key>
+          <Property Name="depo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="depo_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="depo_yer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="depo_adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="depo_sorumlusu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="depo_telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Kategori">
+          <Key>
+            <PropertyRef Name="kategori_id" />
+          </Key>
+          <Property Name="kategori_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kategori_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="STOK_TAKIPEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Birim" EntityType="Self.tbl_Birim" />
+          <EntitySet Name="tbl_Depo" EntityType="Self.tbl_Depo" />
+          <EntitySet Name="tbl_Kategori" EntityType="Self.tbl_Kategori" />
+          <EntitySet Name="tbl_Transfer" EntityType="STOK_TAKIPModel.tbl_Transfer" />
+          <EntitySet Name="tbl_Kullanici" EntityType="STOK_TAKIPModel.tbl_Kullanici" />
+          <EntitySet Name="tbl_Firma" EntityType="STOK_TAKIPModel.tbl_Firma" />
+          <EntitySet Name="tbl_Stok" EntityType="STOK_TAKIPModel.tbl_Stok" />
+          <EntitySet Name="tbl_Stok_Satis" EntityType="STOK_TAKIPModel.tbl_Stok_Satis" />
+        </EntityContainer>
+        <EntityType Name="tbl_Transfer">
+          <Key>
+            <PropertyRef Name="transfer_id" />
+          </Key>
+          <Property Name="transfer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="stok_id" Type="Int32" />
+          <Property Name="miktar" Type="Int32" />
+          <Property Name="gidicegi_tarih" Type="DateTime" Precision="0" />
+          <Property Name="bulundugu_depo_id" Type="Int32" />
+          <Property Name="gidecegi_depo_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Kullanici">
+          <Key>
+            <PropertyRef Name="kullanici_id" />
+          </Key>
+          <Property Name="kullanici_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tc_no" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="ad" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="soyad" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="kullanici_ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kullanici_sifre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefon" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dogum_tarih" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="cinsiyet" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="resim" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="hesap_durum" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="tema" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Firma">
+          <Key>
+            <PropertyRef Name="firma_id" />
+          </Key>
+          <Property Name="firma_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firma_ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="firma_adres" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="firma_telefon" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="vergi_dairesi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hesap_no" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="firma_aciklama" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="firma_resmi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Stok">
+          <Key>
+            <PropertyRef Name="stok_id" />
+          </Key>
+          <Property Name="stok_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="urun_kod" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urun_ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urun_miktar" Type="Int32" Nullable="false" />
+          <Property Name="kategori_id" Type="Int32" Nullable="false" />
+          <Property Name="firma_id" Type="Int32" Nullable="false" />
+          <Property Name="birim_id" Type="Int32" Nullable="false" />
+          <Property Name="birim_miktar" Type="Int32" Nullable="false" />
+          <Property Name="birim_fiyat" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="depo_id" Type="Int32" Nullable="false" />
+          <Property Name="resim" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="alis_tarih" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tbl_Stok_Satis">
+          <Key>
+            <PropertyRef Name="stok_satis_id" />
+          </Key>
+          <Property Name="stok_satis_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="stok_id" Type="Int32" Nullable="false" />
+          <Property Name="firma_id" Type="Int32" Nullable="false" />
+          <Property Name="depo_id" Type="Int32" Nullable="false" />
+          <Property Name="miktar" Type="Int32" Nullable="false" />
+          <Property Name="net_fiyat" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="kdv" Type="Int32" />
+          <Property Name="otv" Type="Int32" />
+          <Property Name="brut_fiyat" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="satis_tarih" Type="DateTime" Precision="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="STOK_TAKIPModelStoreContainer" CdmEntityContainer="STOK_TAKIPEntities">
+          <EntitySetMapping Name="tbl_Birim">
+            <EntityTypeMapping TypeName="STOK_TAKIPModel.tbl_Birim">
+              <MappingFragment StoreEntitySet="tbl_Birim">
+                <ScalarProperty Name="birim_id" ColumnName="birim_id" />
+                <ScalarProperty Name="birim_ad" ColumnName="birim_ad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Depo">
+            <EntityTypeMapping TypeName="STOK_TAKIPModel.tbl_Depo">
+              <MappingFragment StoreEntitySet="tbl_Depo">
+                <ScalarProperty Name="depo_id" ColumnName="depo_id" />
+                <ScalarProperty Name="depo_ad" ColumnName="depo_ad" />
+                <ScalarProperty Name="depo_yer" ColumnName="depo_yer" />
+                <ScalarProperty Name="depo_adres" ColumnName="depo_adres" />
+                <ScalarProperty Name="depo_sorumlusu" ColumnName="depo_sorumlusu" />
+                <ScalarProperty Name="depo_telefon" ColumnName="depo_telefon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Kategori">
+            <EntityTypeMapping TypeName="STOK_TAKIPModel.tbl_Kategori">
+              <MappingFragment StoreEntitySet="tbl_Kategori">
+                <ScalarProperty Name="kategori_id" ColumnName="kategori_id" />
+                <ScalarProperty Name="kategori_ad" ColumnName="kategori_ad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Transfer">
+            <EntityTypeMapping TypeName="STOK_TAKIPModel.tbl_Transfer">
+              <MappingFragment StoreEntitySet="tbl_Transfer">
+                <ScalarProperty Name="gidecegi_depo_id" ColumnName="gidecegi_depo_id" />
+                <ScalarProperty Name="bulundugu_depo_id" ColumnName="bulundugu_depo_id" />
+                <ScalarProperty Name="gidicegi_tarih" ColumnName="gidicegi_tarih" />
+                <ScalarProperty Name="miktar" ColumnName="miktar" />
+                <ScalarProperty Name="stok_id" ColumnName="stok_id" />
+                <ScalarProperty Name="transfer_id" ColumnName="transfer_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Kullanici">
+            <EntityTypeMapping TypeName="STOK_TAKIPModel.tbl_Kullanici">
+              <MappingFragment StoreEntitySet="tbl_Kullanici">
+                <ScalarProperty Name="tema" ColumnName="tema" />
+                <ScalarProperty Name="hesap_durum" ColumnName="hesap_durum" />
+                <ScalarProperty Name="resim" ColumnName="resim" />
+                <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+                <ScalarProperty Name="dogum_tarih" ColumnName="dogum_tarih" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="kullanici_sifre" ColumnName="kullanici_sifre" />
+                <ScalarProperty Name="kullanici_ad" ColumnName="kullanici_ad" />
+                <ScalarProperty Name="soyad" ColumnName="soyad" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="tc_no" ColumnName="tc_no" />
+                <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Firma">
+            <EntityTypeMapping TypeName="STOK_TAKIPModel.tbl_Firma">
+              <MappingFragment StoreEntitySet="tbl_Firma">
+                <ScalarProperty Name="firma_resmi" ColumnName="firma_resmi" />
+                <ScalarProperty Name="firma_aciklama" ColumnName="firma_aciklama" />
+                <ScalarProperty Name="hesap_no" ColumnName="hesap_no" />
+                <ScalarProperty Name="vergi_dairesi" ColumnName="vergi_dairesi" />
+                <ScalarProperty Name="firma_telefon" ColumnName="firma_telefon" />
+                <ScalarProperty Name="firma_adres" ColumnName="firma_adres" />
+                <ScalarProperty Name="firma_ad" ColumnName="firma_ad" />
+                <ScalarProperty Name="firma_id" ColumnName="firma_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Stok">
+            <EntityTypeMapping TypeName="STOK_TAKIPModel.tbl_Stok">
+              <MappingFragment StoreEntitySet="tbl_Stok">
+                <ScalarProperty Name="alis_tarih" ColumnName="alis_tarih" />
+                <ScalarProperty Name="resim" ColumnName="resim" />
+                <ScalarProperty Name="depo_id" ColumnName="depo_id" />
+                <ScalarProperty Name="birim_fiyat" ColumnName="birim_fiyat" />
+                <ScalarProperty Name="birim_miktar" ColumnName="birim_miktar" />
+                <ScalarProperty Name="birim_id" ColumnName="birim_id" />
+                <ScalarProperty Name="firma_id" ColumnName="firma_id" />
+                <ScalarProperty Name="kategori_id" ColumnName="kategori_id" />
+                <ScalarProperty Name="urun_miktar" ColumnName="urun_miktar" />
+                <ScalarProperty Name="urun_ad" ColumnName="urun_ad" />
+                <ScalarProperty Name="urun_kod" ColumnName="urun_kod" />
+                <ScalarProperty Name="stok_id" ColumnName="stok_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Stok_Satis">
+            <EntityTypeMapping TypeName="STOK_TAKIPModel.tbl_Stok_Satis">
+              <MappingFragment StoreEntitySet="tbl_Stok_Satis">
+                <ScalarProperty Name="satis_tarih" ColumnName="satis_tarih" />
+                <ScalarProperty Name="brut_fiyat" ColumnName="brut_fiyat" />
+                <ScalarProperty Name="otv" ColumnName="otv" />
+                <ScalarProperty Name="kdv" ColumnName="kdv" />
+                <ScalarProperty Name="net_fiyat" ColumnName="net_fiyat" />
+                <ScalarProperty Name="miktar" ColumnName="miktar" />
+                <ScalarProperty Name="depo_id" ColumnName="depo_id" />
+                <ScalarProperty Name="firma_id" ColumnName="firma_id" />
+                <ScalarProperty Name="stok_id" ColumnName="stok_id" />
+                <ScalarProperty Name="stok_satis_id" ColumnName="stok_satis_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

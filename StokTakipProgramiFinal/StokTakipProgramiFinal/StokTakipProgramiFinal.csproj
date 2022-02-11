@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A26F7CD-0D38-4240-8732-A8D3032BF465}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StokTakipProgramiFinal</RootNamespace>
+    <AssemblyName>StokTakipProgramiFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.7.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.7\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.7.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.7\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEkrani.Designer.cs">
+      <DependentUpon>AdminEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ayarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayarlar.Designer.cs">
+      <DependentUpon>Ayarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarkodOkuyucu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarkodOkuyucu.Designer.cs">
+      <DependentUpon>BarkodOkuyucu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepoBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepoBilgileri.Designer.cs">
+      <DependentUpon>DepoBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepoEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepoEkle.Designer.cs">
+      <DependentUpon>DepoEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepoTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepoTransfer.Designer.cs">
+      <DependentUpon>DepoTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirmaBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmaBilgileri.Designer.cs">
+      <DependentUpon>FirmaBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirmaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmaEkle.Designer.cs">
+      <DependentUpon>FirmaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisEkrani.Designer.cs">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciEkle.Designer.cs">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciEkrani.Designer.cs">
+      <DependentUpon>KullaniciEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciIslemleri.Designer.cs">
+      <DependentUpon>KullaniciIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SifremiUnuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifremiUnuttum.Designer.cs">
+      <DependentUpon>SifremiUnuttum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokAlis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokAlis.Designer.cs">
+      <DependentUpon>StokAlis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokBilgileri.Designer.cs">
+      <DependentUpon>StokBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokSatis.Designer.cs">
+      <DependentUpon>StokSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Birim.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Depo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Firma.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Kategori.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Kullanici.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Stok.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Stok_Satis.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Transfer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YeniSifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeniSifre.Designer.cs">
+      <DependentUpon>YeniSifre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuklemeEkrani.Designer.cs">
+      <DependentUpon>YuklemeEkrani.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminEkrani.resx">
+      <DependentUpon>AdminEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ayarlar.resx">
+      <DependentUpon>Ayarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarkodOkuyucu.resx">
+      <DependentUpon>BarkodOkuyucu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepoBilgileri.resx">
+      <DependentUpon>DepoBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepoEkle.resx">
+      <DependentUpon>DepoEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepoTransfer.resx">
+      <DependentUpon>DepoTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirmaBilgileri.resx">
+      <DependentUpon>FirmaBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirmaEkle.resx">
+      <DependentUpon>FirmaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisEkrani.resx">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciEkle.resx">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciEkrani.resx">
+      <DependentUpon>KullaniciEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciIslemleri.resx">
+      <DependentUpon>KullaniciIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SifremiUnuttum.resx">
+      <DependentUpon>SifremiUnuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokAlis.resx">
+      <DependentUpon>StokAlis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokBilgileri.resx">
+      <DependentUpon>StokBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokSatis.resx">
+      <DependentUpon>StokSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeniSifre.resx">
+      <DependentUpon>YeniSifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuklemeEkrani.resx">
+      <DependentUpon>YuklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

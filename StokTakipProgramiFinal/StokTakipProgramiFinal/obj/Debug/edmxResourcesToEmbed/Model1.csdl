@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="STOK_TAKIPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_Birim">
+    <Key>
+      <PropertyRef Name="birim_id" />
+    </Key>
+    <Property Name="birim_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="birim_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Depo">
+    <Key>
+      <PropertyRef Name="depo_id" />
+    </Key>
+    <Property Name="depo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="depo_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="depo_yer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="depo_adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="depo_sorumlusu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="depo_telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Kategori">
+    <Key>
+      <PropertyRef Name="kategori_id" />
+    </Key>
+    <Property Name="kategori_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategori_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="STOK_TAKIPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Birim" EntityType="Self.tbl_Birim" />
+    <EntitySet Name="tbl_Depo" EntityType="Self.tbl_Depo" />
+    <EntitySet Name="tbl_Kategori" EntityType="Self.tbl_Kategori" />
+    <EntitySet Name="tbl_Transfer" EntityType="STOK_TAKIPModel.tbl_Transfer" />
+    <EntitySet Name="tbl_Kullanici" EntityType="STOK_TAKIPModel.tbl_Kullanici" />
+    <EntitySet Name="tbl_Firma" EntityType="STOK_TAKIPModel.tbl_Firma" />
+    <EntitySet Name="tbl_Stok" EntityType="STOK_TAKIPModel.tbl_Stok" />
+    <EntitySet Name="tbl_Stok_Satis" EntityType="STOK_TAKIPModel.tbl_Stok_Satis" />
+  </EntityContainer>
+  <EntityType Name="tbl_Transfer">
+    <Key>
+      <PropertyRef Name="transfer_id" />
+    </Key>
+    <Property Name="transfer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stok_id" Type="Int32" />
+    <Property Name="miktar" Type="Int32" />
+    <Property Name="gidicegi_tarih" Type="DateTime" Precision="0" />
+    <Property Name="bulundugu_depo_id" Type="Int32" />
+    <Property Name="gidecegi_depo_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Kullanici">
+    <Key>
+      <PropertyRef Name="kullanici_id" />
+    </Key>
+    <Property Name="kullanici_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tc_no" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="ad" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="soyad" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="kullanici_ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kullanici_sifre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dogum_tarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="cinsiyet" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="resim" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="hesap_durum" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="tema" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Firma">
+    <Key>
+      <PropertyRef Name="firma_id" />
+    </Key>
+    <Property Name="firma_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firma_ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firma_adres" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firma_telefon" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="vergi_dairesi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hesap_no" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firma_aciklama" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firma_resmi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Stok">
+    <Key>
+      <PropertyRef Name="stok_id" />
+    </Key>
+    <Property Name="stok_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urun_kod" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="urun_ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="urun_miktar" Type="Int32" Nullable="false" />
+    <Property Name="kategori_id" Type="Int32" Nullable="false" />
+    <Property Name="firma_id" Type="Int32" Nullable="false" />
+    <Property Name="birim_id" Type="Int32" Nullable="false" />
+    <Property Name="birim_miktar" Type="Int32" Nullable="false" />
+    <Property Name="birim_fiyat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="depo_id" Type="Int32" Nullable="false" />
+    <Property Name="resim" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="alis_tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tbl_Stok_Satis">
+    <Key>
+      <PropertyRef Name="stok_satis_id" />
+    </Key>
+    <Property Name="stok_satis_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stok_id" Type="Int32" Nullable="false" />
+    <Property Name="firma_id" Type="Int32" Nullable="false" />
+    <Property Name="depo_id" Type="Int32" Nullable="false" />
+    <Property Name="miktar" Type="Int32" Nullable="false" />
+    <Property Name="net_fiyat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="kdv" Type="Int32" />
+    <Property Name="otv" Type="Int32" />
+    <Property Name="brut_fiyat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="satis_tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+</Schema>
